@@ -1,0 +1,32 @@
+{% extends 'teachertemplate/teacherbase.html' %}
+{% block content %}
+
+
+
+
+<table class="table">
+    <thead class="table table-striped">
+    <tr>
+        <th scope="col">NO&nbsp;&nbsp;</th>
+        <th scope="col">STUDENT NAME&nbsp;&nbsp;</th>
+        <th scope="col"> SUBJECT&nbsp;&nbsp;</th>
+        <th scope="col"> MARK&nbsp;&nbsp;</th>
+
+
+
+    </tr>
+</thead>
+<tbody>
+
+     {% for i in show %}
+    <tr>
+        <td> {{forloop.counter}}</td>
+        <td> {{i.student_name }} </td>
+        <td> {{i.subject}} </td>
+        <td> {{i.mark}}  </td>
+
+    </tr>
+       {% endfor %}
+</tbody>
+</table>
+{% endblock %}

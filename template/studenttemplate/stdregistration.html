@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+Student
+ <div class="card">
+     <form method="POST" enctype="multipart/form-data">
+         {% csrf_token %}
+{{show1|crispy}}
+         {{show2|crispy}}
+<button type="submit" class="btn btn-dark">Submit</button>
+     </form>
+     </div>
+{% endblock %}
